@@ -1,0 +1,27 @@
+<%= render 'layouts/header' %>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ruby App</title>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+    </head>
+
+    <%= stylesheet_link_tag "application" %>
+
+    <body>
+        <% if flash[:notice] %>
+            <div class="notification is-info">
+                <p class="notice"><%= notice %></p>
+            </div>
+        <% end %>
+        <% if flash[:alert] %>
+            <div class="notification is-danger">
+            <p class="alert"><%= alert %></p>
+            </div>
+        <% end %>
+
+        <%= yield %>
+     </body>
+</html>

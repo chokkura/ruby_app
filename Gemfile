@@ -19,6 +19,8 @@ gem 'bulma-rails'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "guard"
+  gem 'guard-livereload', '~> 2.4', require: false
 end
 
 group :development do

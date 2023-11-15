@@ -1,4 +1,10 @@
 class ServicesController < ApplicationController
-    def show
+    def index
+    end
+    
+    def use_script
+    end
+
+    def use_importmap
     end
 end

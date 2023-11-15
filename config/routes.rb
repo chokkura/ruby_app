@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   get "about" => "about#show" 
-  get "service" => "services#show"
+  get "service" => "services#index"
+  get "service/use_script" => "services#use_script"
+  get "service/use_importmap" => "services#use_importmap"
 end

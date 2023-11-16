@@ -7,4 +7,7 @@ class ServicesController < ApplicationController
 
     def use_importmap
     end
+
+    def use_react
+    end
 end

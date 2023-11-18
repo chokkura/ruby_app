@@ -1,11 +1,6 @@
-<body>
-    <script type="module" src="/packs/alert.js"></script>
-
+<% content_for :head do %>
     <script type="module">
-    import { showAlert } from "/packs/alert.js";
-
-    window.onload = function () {
-    alert("scriptにjavascriptを挿入");
-    };
+        import {showAlert} from "alert"
+        showAlert("scriptにjavascript挿入")
     </script>
-</body>
+<% end %>

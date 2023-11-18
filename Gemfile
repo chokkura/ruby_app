@@ -18,6 +18,7 @@ gem 'devise'
 gem 'bulma-rails'
 gem 'webpacker'
 gem 'react-rails'
+gem 'ruby-openai'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

@@ -1,12 +1,13 @@
-<form name="login_form">
-  <div class="login_form_top">
-    <h1>SERVICE</h1>
+<% content_for :body do %>
+  <form name="login_form">
+    <div class="login_form_top">
+      <h1>SERVICE</h1>
         <ul>
-            <li><a href="service/use_script">scriptに挿入</a></li>
-            <li><a href="service/use_importmap">Importmap使用</a></li>
-            <li><a href="service/use_react">React使用</a></li>
+          <li><a href="service/use_script">scriptに挿入</a></li>
+          <li><a href="service/use_importmap">Importmap使用</a></li>
         </ul>
-  </div>
-</form>
-
-<%= stylesheet_link_tag "about" %>
+    </div>
+  </form>
+  
+  <%= stylesheet_link_tag "about" %>
+<% end %>

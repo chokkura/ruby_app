@@ -1,4 +1,6 @@
-<body>
+<% content_for :body do %>
+  <form name="service_form">
     <p>reactを用いたページです</p>
-<%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
-</body>
+    <%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
+  </form>
+<% end %>

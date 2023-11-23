@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'top#index'
   devise_for :users
 
+  resources :articles
+
   get 'about' => 'about#show'
   get 'service' => 'services#index'
   get 'service/use_script' => 'services#use_script'

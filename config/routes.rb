@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   root 'top#index'
   devise_for :users
 
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 
   get 'about' => 'about#show'
   get 'service' => 'services#index'

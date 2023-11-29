@@ -292,7 +292,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bulma-rails
-  bun
+  bun (~> 1.0)
   capybara
   debug
   devise

@@ -1,0 +1,41 @@
+name: "test"
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.2'
+          bundler-cache: true
+
+      - name: sqlite3 install
+        run: |
+          sudo apt install libsqlite3-dev
+          gem install sqlite3 -v '1.4.2' --source 'https://rubygems.org/'
+          dpkg -L libsqlite3-dev
+      
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+      
+      - name: Set up database schema
+        run: bin/rails db:schema:load
+      # Add or replace test runners here
+      
+      - name: Run Minitest
+        run: bundle exec rake test

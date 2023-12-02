@@ -20,6 +20,11 @@ jobs:
         with:
           ruby-version: '3.2.2'
           bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install 
       
-      - name: Lint Ruby files
+      - name: Run Rubocop
         run: rubocop

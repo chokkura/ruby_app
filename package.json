@@ -1,16 +1,24 @@
 {
   "dependencies": {
+    "@babel/core": "^7.23.5",
     "@babel/preset-react": "^7.23.3",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "esbuild": "^0.19.6",
+    "esbuild": "^0.19.8",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "webpack": "^5.89.0"
   },
   "devDependencies": {
     "babel-loader": "^9.1.3"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets"
-  }
+  },
+  "name": "ruby_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:chokkura/ruby_app.git",
+  "author": "pjgr <pjgrooei@msn.com>",
+  "license": "MIT"
 }

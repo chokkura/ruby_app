@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ArticlesControllerTest < ActionDispatch::IntegrationTest  
+class ArticlesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @article = articles(:one) # fixturesを使用する場合
   end
@@ -11,15 +11,13 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    log_in_as_test_user
-    get new_article_path
+    get new_article_path, headers: {
+      'HTTP_AUTHORIZATION' => ActionController::HttpAuthentication::Basic.encode_credentials('dhh', 'secret')
+    }
     assert_response :success
   end
 
   test "should get create" do
-    # Note: This is typically used with a POST request, not a GET request.
-    # For testing create action, you might need to use post method instead of get.
-    # Example: post articles_path, params: { article: { title: "New Article" } }
     assert true
   end
 
@@ -30,9 +28,10 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit" do
-    log_in_as_test_user
     # Assuming you have an article with ID 1
-    get edit_article_path(@article)
+    get edit_article_path(@article), headers: {
+      'HTTP_AUTHORIZATION' => ActionController::HttpAuthentication::Basic.encode_credentials('dhh', 'secret')
+    }
     assert_response :success
   end
 
@@ -40,11 +39,5 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
     # Assuming you have an article with ID 1
     get article_path(@article)
     assert_response :success
-  end
-
-  private
-
-  def log_in_as_test_user
-    post login_path, params: { session: { name: "dhh", password: "secret" } }
   end
 end

@@ -34,7 +34,7 @@ jobs:
           bundle install
 
       - name: Migrate for test
-        run: rails db:migrate RAILS_ENV=test
+        run: bundle exec rails db:migrate RAILS_ENV=test
       
       - name: Run Minitest
         run: bundle exec rake test

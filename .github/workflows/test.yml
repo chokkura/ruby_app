@@ -25,12 +25,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.9.0'
+          node-version: '20'
 
       - name: sqlite3 install
         run: |
-          sudo apt install libsqlite3-dev
           gem install sqlite3 -v '1.4.2' --source 'https://rubygems.org/'
+          sudo apt install libsqlite3-dev
           dpkg -L libsqlite3-dev
 
       - name: Migrate for test

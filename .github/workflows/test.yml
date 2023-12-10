@@ -35,6 +35,7 @@ jobs:
 
       - name: Migrate for test
         run: |
+          bundle exec rake assets:precompile
           yarn cache clean
           yarn install
           bundle exec rails db:migrate RAILS_ENV=test

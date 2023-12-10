@@ -324,6 +324,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  execjs
   jbuilder
   jsbundling-rails
   puma (~> 5.0)

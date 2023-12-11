@@ -60,6 +60,5 @@ Rails.application.configure do
 
   config.action_dispatch.show_exceptions = :none
   config.action_controller.allow_forgery_protection = false
-  config.assets.js_compressor = :node
 
 end

@@ -22,6 +22,8 @@ gem 'jsbundling-rails'
 gem 'sprockets-rails'
 gem 'react-rails'
 gem 'bulma-rails'
+gem 'mini_racer', platforms: :ruby
+gem 'webpack'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]

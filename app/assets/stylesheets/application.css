@@ -1,13 +1,18 @@
 @import "bulma";
 
+div {
+  background-color: white;
+}
+
 body {
     background-color: #808080;
   }
-  
 
 h1 {
     font-size: 40px;
 }
+
+
 
 main{
     margin-top: 160px;

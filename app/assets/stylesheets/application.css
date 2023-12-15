@@ -1,9 +1,5 @@
 @import "bulma";
 
-div {
-  background-color: white;
-}
-
 body {
     background-color: #808080;
   }
@@ -12,7 +8,9 @@ h1 {
     font-size: 40px;
 }
 
-
+div {
+    background-color: white;
+}
 
 main{
     margin-top: 160px;

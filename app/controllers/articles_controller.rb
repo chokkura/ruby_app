@@ -24,11 +24,11 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find_by(params[:id])
+    @article = Article.find_by(id: params[:id])
   end
 
   def update
-    @article = Article.find_by(params[:id])
+    @article = Article.find_by(id: params[:id])
 
     if @article.update(article_params)
       redirect_to @article
@@ -38,7 +38,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find_by(params[:id])
+    @article = Article.find_by(id: params[:id])
     @article.destroy
 
     redirect_to articles_index_path, status: :see_other

@@ -115,6 +115,14 @@ GEM
       warden (~> 1.2.3)
     drb (2.2.0)
       ruby2_keywords
+    elastic-transport (8.3.0)
+      faraday (< 3)
+      multi_json
+    elasticsearch (8.11.0)
+      elastic-transport (~> 8.3)
+      elasticsearch-api (= 8.11.0)
+    elasticsearch-api (8.11.0)
+      multi_json
     erubi (1.12.0)
     event_stream_parser (1.0.0)
     execjs (2.9.1)
@@ -159,6 +167,7 @@ GEM
       libv8-node (~> 18.16.0.0)
     minitest (5.20.0)
     msgpack (1.7.2)
+    multi_json (1.15.0)
     multipart-post (2.3.0)
     mutex_m (0.2.0)
     net-imap (0.4.7)
@@ -321,6 +330,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  elasticsearch
   jbuilder
   jsbundling-rails
   mini_racer

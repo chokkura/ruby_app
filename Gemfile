@@ -19,6 +19,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'elasticsearch'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+gem 'shakapacker', '>= 7.1'
 
 # Javascript 関連
 gem 'jsbundling-rails'
@@ -42,3 +43,4 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+

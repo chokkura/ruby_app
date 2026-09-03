@@ -14,7 +14,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react_ujs": "^3.1.1",
-    "shakapacker": "7.1.0",
+    "shakapacker": "10.3.2",
     "terser-webpack-plugin": "5",
     "webpack": "5",
     "webpack-assets-manifest": "5",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "babel-loader": "8",
-    "webpack-dev-server": "4"
+    "webpack-dev-server": "6"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets"
